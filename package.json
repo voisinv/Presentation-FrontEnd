@@ -1,0 +1,31 @@
+{
+  "name": "Presentation-FrontEnd",
+  "version": "1.0.0",
+  "description": "Présentation du framework AngularJS et d'outils d'industrialisation Front",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voisinv/Presentation-FrontEnd.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "Grunt",
+    "Bower",
+    "Protractor",
+    "Karma"
+  ],
+  "author": "Vincent Voisin & Marc Grégoire",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voisinv/Presentation-FrontEnd/issues"
+  },
+  "homepage": "https://github.com/voisinv/Presentation-FrontEnd",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-connect": "^0.10.1",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
