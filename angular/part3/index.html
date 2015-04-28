@@ -3,8 +3,68 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
-<body>
-<script scr="script-part3.js"></script>
+<body ng-app="myApp" ng-controller="formCtrl">
+    <h1>Utilisation d'un formulaire</h1>
+
+    <form name="myForm">
+        <div>
+            Nom (required)
+            <input type="text" ng-required="true" name='nom' ng-model="nom" placeholder="Nom"/>
+        </div>
+
+        <div>
+            Prénom
+            <input type="text" name='prenom' ng-model="prenom" placeholder="Prenom"/>
+        </div>
+
+        <div>
+            Email (required)
+            <input type="email" ng-required="true" name='email' ng-model="email" placeholder="Email"/>
+        </div>
+
+        <div>
+            <button type="submit">Valider</button>
+        </div>
+    </form>
+
+
+    <div>
+        <h4>Validateur du Nom</h4>
+        <p ng-class="{backGreen: myForm.nom.$valid, backRed:myForm.nom.$invalid}">nom.$valid : {{myForm.nom.$valid}}</p>
+        <p ng-class="{backGreen: myForm.nom.$invalid, backRed:myForm.nom.$valid}">nom.$invalid : {{myForm.nom.$invalid}}</p>
+        <p ng-class="{backGreen: myForm.nom.$pristine, backRed:myForm.nom.$dirty}">nom.$pristine : {{myForm.nom.$pristine}}</p>
+        <p ng-class="{backGreen: myForm.nom.$dirty, backRed:myForm.nom.$pristine}">nom.$dirty : {{myForm.nom.$dirty}}</p>
+    </div>
+
+    <div>
+        <h4>Validateur du Prénom</h4>
+        <p ng-class="{backGreen: myForm.prenom.$valid, backRed:myForm.prenom.$invalid}">prenom.$valid : {{myForm.prenom.$valid}}</p>
+        <p ng-class="{backGreen: myForm.prenom.$invalid, backRed:myForm.prenom.$valid}">prenom.$invalid : {{myForm.prenom.$invalid}}</p>
+        <p ng-class="{backGreen: myForm.prenom.$pristine, backRed:myForm.prenom.$dirty}">prenom.$pristine : {{myForm.prenom.$pristine}}</p>
+        <p ng-class="{backGreen: myForm.prenom.$dirty, backRed:myForm.prenom.$pristine}">prenom.$dirty : {{myForm.prenom.$dirty}}</p>
+    </div>
+
+    <div>
+        <h4>Validateur de l'email</h4>
+        <p ng-class="{backGreen: myForm.email.$valid, backRed:myForm.email.$invalid}">email.$valid : {{myForm.email.$valid}}</p>
+        <p ng-class="{backGreen: myForm.email.$invalid, backRed:myForm.email.$valid}">email.$invalid : {{myForm.email.$invalid}}</p>
+        <p ng-class="{backGreen: myForm.email.$pristine, backRed:myForm.email.$dirty}">email.$pristine : {{myForm.email.$pristine}}</p>
+        <p ng-class="{backGreen: myForm.email.$dirty, backRed:myForm.email.$pristine}">email.$dirty : {{myForm.email.$dirty}}</p>
+    </div>
+
+    <div>
+        <h4>Validateur du formulaire</h4>
+        <p ng-class="{backGreen: myForm.$valid, backRed:myForm.$invalid}">form.$valid : {{myForm.$valid}}</p>
+        <p ng-class="{backGreen: myForm.$invalid, backRed:myForm.$valid}">form.$invalid : {{myForm.$invalid}}</p>
+        <p ng-class="{backGreen: myForm.$pristine, backRed:myForm.$dirty}">form.$pristine : {{myForm.$pristine}}</p>
+        <p ng-class="{backGreen: myForm.$dirty, backRed:myForm.$pristine}">form.$dirty : {{myForm.$dirty}}</p>
+        <p ng-class="{backGreen: myForm.$submitted, backRed:!myForm.$submitted}">form.$submitted : {{myForm.$submitted}}</p>
+    </div>
+
+
+<script src="angular.js"></script>
+<script src="script-part3.js"></script>
 </body>
 </html>
