@@ -24,6 +24,11 @@ module.exports = (grunt) ->
           base: ['./angular/part3']
           open: true
           keepalive: true
+      part4:
+        options:
+          base: ['./angular/part4']
+          open: true
+          keepalive: true
 
 
 
