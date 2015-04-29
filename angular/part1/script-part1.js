@@ -18,5 +18,9 @@ angular.module('myApp', [])
         $scope.filtre = {
             capitale: '',
             pays: ''
+        };
+
+        $scope.alert = function(o) {
+            alert('Vous avez sélectionné ' + o.capitale)
         }
     })

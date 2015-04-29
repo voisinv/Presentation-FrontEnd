@@ -5,13 +5,13 @@
     <title>AngularJS</title>
 </head>
 <body ng-app="myApp" ng-controller="mainCtrl">
-    <h1>Hello from the part1</h1>
+    <h1>Initialisation d'une application avec AngularJS</h1>
 
     Ma liste de capitales
     <input type="text" ng-model="filtre.pays" placeholder="pays"/>
     <input type="text" ng-model="filtre.capitale" placeholder="capitale"/>
     <ul>
-        <li ng-repeat="i in datas | filter:filtre:strict" ng-if="i.capitale.length % 2 == 0">{{i.pays}} - {{i.capitale}}</li>
+        <li ng-repeat="i in datas | filter:filtre:strict" ng-click="alert(i)">{{i.pays}} - {{i.capitale}}</li>
     </ul>
 
     <script src="angular.js"></script>
