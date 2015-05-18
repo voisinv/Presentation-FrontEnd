@@ -4,6 +4,23 @@
     <meta charset="UTF-8">
     <title>AngularJS</title>
 </head>
+<body>
+<div ng-app="startApp" ng-controller="startCtrl">
+    <ul>
+        <li ng-repeat="data in datas" ng-mouseenter="doAlert(data)" ng-if="">
+            La capitale de {{data.pays}} est {{data.capitale}}
+        </li>
+    </ul>
+
+
+</div>
+
+<script src="angular.js"></script>
+<script src="script-part1.js"></script>
+</body>
+</html>
+
+<!--
 <body ng-app="myApp" ng-controller="mainCtrl">
     <h1>Initialisation d'une application avec AngularJS</h1>
 
@@ -17,4 +34,4 @@
     <script src="angular.js"></script>
     <script src="script-part1.js"></script>
 </body>
-</html>
+-->

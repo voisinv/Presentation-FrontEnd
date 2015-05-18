@@ -6,4 +6,4 @@ angular.module('myApp', ['textAngular'])
 
 .controller('textController', function() {
 
-});
+})

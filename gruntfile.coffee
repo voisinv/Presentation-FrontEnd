@@ -9,24 +9,29 @@ module.exports = (grunt) ->
         hostname: 'localhost'
         livereload: 35729
         port: 3000
-      part1:
+      start:
         options:
-          base: ['./angular/part1']
+          base: ['./angular/start']
           open: true
           keepalive: true
-      part2:
+      service:
         options:
-          base: ['./angular/part2']
+          base: ['./angular/service']
           open: true
           keepalive: true
-      part3:
+      formulaire:
         options:
-          base: ['./angular/part3']
+          base: ['./angular/formulaire']
           open: true
           keepalive: true
-      part4:
+      textangular:
         options:
-          base: ['./angular/part4']
+          base: ['./angular/textangular']
+          open: true
+          keepalive: true
+      router:
+        options:
+          base: ['./angular/router']
           open: true
           keepalive: true
 
@@ -34,7 +39,7 @@ module.exports = (grunt) ->
 
 
 
-  grunt.loadNpmTasks 'grunt-contrib-watch'
+
   grunt.loadNpmTasks 'grunt-contrib-connect'
 
   grunt.registerTask 'server', (arg)->
